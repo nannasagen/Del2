@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Test Suite</title>
+<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.16.0.css">
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="https://code.jquery.com/qunit/qunit-2.16.0.js"></script>
+  <script src="Stolpediagram.js"></script>
+  
+  <script>
+
+    function selectedStolpe(){
+
+    };
+    function fjernStolpen(){
+
+    };
+    function editStolpen(){
+
+    };
+    function addStolpe(){
+
+    };
+
+    /*function add(a, b) {
+      return a + b;
+    }*/
+  
+    QUnit.module('add', function() {
+        QUnit.test('valgt stolpe', function(assert) {
+            const actual = selectedStolpe(index);
+            const expected = 
+          assert.equal(add(1, 1), 2);
+        });
+        QUnit.test('fjerner stolpe', function(assert) {
+            const actual = fjernStolpen();
+            const expected = 
+          assert.equal(add(1, 1), 2);
+        });
+        QUnit.test('endre stolpe', function(assert) {
+            const actual = editStolpen();
+            const expected = 
+          assert.equal(add(1, 1), 2);
+        });
+        QUnit.test('legge til stolpe', function(assert) {
+            const actual = addStolpe();
+            const expected = 
+          assert.equal(add(1, 1), 2);
+        });
+    });
+  </script>
+</body>
