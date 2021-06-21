@@ -14,15 +14,15 @@
     let selectedElement;
     let inputValue;
 
-    show();
+   
     function show() {
 
     }
 
     QUnit.test('Velg stolpe', function (assert) {
-            selectStolpe();
+            selectStolpe(1);
             let actual = selectedElement;
-            let expected = ingen;
+            let expected = "ingen";
             assert.equal(actual, expected);
         });
 
