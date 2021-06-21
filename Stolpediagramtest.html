@@ -10,44 +10,49 @@
   
   <script>
 
-    function selectedStolpe(){
+    let numbers
+    let selectedElement;
+    let inputValue;
 
-    };
-    function fjernStolpen(){
+    show();
+    function show() {
 
-    };
-    function editStolpen(){
+    }
 
-    };
-    function addStolpe(){
+    QUnit.test('Velg stolpe', function (assert) {
+            selectStolpe();
+            let actual = selectedElement;
+            let expected = ingen;
+            assert.equal(actual, expected);
+        });
 
-    };
+        QUnit.test('Slett stolpe', function (assert) {
+            numbers = [3, 4, 2]
+            selectedElement = 2;
+            fjernStolpen();
+            let actual = numbers;
+            let expected = [3, 2];
+            assert.deepEqual(actual, expected);
+        });
 
-    /*function add(a, b) {
-      return a + b;
-    }*/
+        QUnit.test('Endre stolpe', function (assert) {
+            numbers = [4, 1, 5];
+            selectedElement = 1;
+            inputValue = 9;         
+            editStolpen();
+            let actual = numbers;
+            let expected = [9, 1, 5];
+            assert.deepEqual(actual, expected);
+        });
+
+        QUnit.test('Legg til stolpe', function (assert) {
+            numbers = [3, 1, 2];
+            inputValue = 8;
+            addStolpe(inputValue);
+            let actual = numbers;
+            let expected = [3, 1, 2, 8];
+            assert.deepEqual(actual, expected);
+        });
   
-    QUnit.module('add', function() {
-        QUnit.test('valgt stolpe', function(assert) {
-            const actual = selectedStolpe(index);
-            const expected = 
-          assert.equal(add(1, 1), 2);
-        });
-        QUnit.test('fjerner stolpe', function(assert) {
-            const actual = fjernStolpen();
-            const expected = 
-          assert.equal(add(1, 1), 2);
-        });
-        QUnit.test('endre stolpe', function(assert) {
-            const actual = editStolpen();
-            const expected = 
-          assert.equal(add(1, 1), 2);
-        });
-        QUnit.test('legge til stolpe', function(assert) {
-            const actual = addStolpe();
-            const expected = 
-          assert.equal(add(1, 1), 2);
-        });
-    });
   </script>
 </body>
